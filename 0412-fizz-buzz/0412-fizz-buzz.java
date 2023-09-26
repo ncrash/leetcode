@@ -4,11 +4,14 @@ class Solution {
         
         String temp;
         for (int i = 1; i <= n; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
+            boolean divideBy3 = i % 3 == 0;
+            boolean divideBy5 = i % 5 == 0;
+            
+            if (divideBy3 && divideBy5) {
                 temp = "FizzBuzz";
-            } else if (i % 3 == 0) {
+            } else if (divideBy3) {
                 temp = "Fizz";
-            } else if (i % 5 == 0) {
+            } else if (divideBy5) {
                 temp = "Buzz";
             } else {
                 temp = "" + i;
